@@ -1,0 +1,41 @@
+USE [EmpresaABC]
+GO
+/****** Object:  Table [dbo].[Clientes]    Script Date: 12/06/2018 09:13:52 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Clientes](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[nome] [varchar](100) NOT NULL,
+	[empresa] [varchar](100) NOT NULL,
+	[email] [varchar](100) NOT NULL,
+	[cnpj] [varchar](20) NOT NULL,
+	[fonecomercial] [varchar](10) NOT NULL,
+	[celular] [varchar](11) NOT NULL,
+	[cep] [varchar](9) NOT NULL,
+	[cidade] [varchar](50) NOT NULL,
+	[estado] [nchar](20) NOT NULL,
+	[codigo_acesso] [varchar](100) NULL,
+ CONSTRAINT [PK_Cliente] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Vendedores]    Script Date: 12/06/2018 09:13:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Vendedores](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[login] [varchar](15) NOT NULL,
+ CONSTRAINT [PK_Vendedores] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
